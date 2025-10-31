@@ -130,5 +130,5 @@ README.md
    model_list = ["UnetPlusPlus"]
    backbone_list = ["vgg19"]
    ```
-4. Run all cells; checkpoints will be saved under `Models/` by default.
+4. Run all cells; the trained model will be saved under `Models/` by default. (Pay attention if you train a model with the exact same Network and Backbone of the pre-trained model, it will be overwritten)
 
