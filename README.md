@@ -4,9 +4,6 @@ Two Jupyter notebooks:
 - `TrainSegmentationModel.ipynb` — train your own model (any image size).
 - `AutomaticSegmentation.ipynb` — run the pretrained model.
 
-**Pretrained model input size:** `631 × 486` (W × H). For inference, resize or pad images to this size.  
-Training accepts **any** consistent input size.
-
 ## Folder structure
 ```text
 Models/
@@ -37,6 +34,16 @@ INSTALLATION.md
 README.md
 ```
 
+### About the `Dataset/` folder
+- Existing datasets (`BroadReactive`, `StrictReactive`).
+- **Pretrained weights provenance:** the provided **UNet++/VGG19** weights (`net.pth`) were **trained on the `StrictReactive` dataset** (strongly reactive labels only).
+- When you want to **train**, copy the desired dataset into `Images/` with the exact layout above.
+
+### Masks / labels
+- **Binary segmentation** (astrocyte vs background).
+- Masks must be **0/1**.
+- Filenames must match between `Raw/` and `Labels/` (same width/height).
+- 
 ### How to run inference (pretrained UNet++/VGG19)
 1. Prepare an input set under **PredictionDataset** (the set folder can be named anything):
    ```text
@@ -125,12 +132,3 @@ README.md
    ```
 4. Run all cells; checkpoints will be saved under `Models/` by default.
 
-### About the `Dataset/` folder
-- Existing datasets (`BroadReactive`, `StrictReactive`).
-- **Pretrained weights provenance:** the provided **UNet++/VGG19** weights (`net.pth`) were **trained on the `StrictReactive` dataset** (strongly reactive labels only).
-- When you want to **train**, copy the desired dataset into `Images/` with the exact layout above.
-
-### Masks / labels
-- **Binary segmentation** (astrocyte vs background).
-- Masks must be **0/1**.
-- Filenames must match between `Raw/` and `Labels/` (same width/height).
