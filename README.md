@@ -53,7 +53,6 @@ README.md
 
 ### How to train your own model
 1. Put your chosen dataset under `Images/` in the same structure.
-   - Any fixed size is fine; pick what fits your GPU.
 2. Open `TrainSegmentationModel.ipynb` and and set:
    ```python
    BATCH_SIZE = 1
@@ -65,10 +64,9 @@ README.md
 3. Run all cells; checkpoints will be saved under `Models/` by default.
 
 ### About the `Dataset/` folder
-- Keep any number of datasets here (e.g., `BroadReactive`, `StrictReactive`).
-- **Pretrained weights provenance:** the provided **UNet++/VGG19** weights (`anet.pth`) were **trained on the `StrictReactive` dataset** (strongly reactive labels only).
-- When you want to **train**, copy/symlink the desired dataset into `Images/` with the exact layout above.
-- For **inference**, point `pred_root` to a folder under `PredictionDataset/` that contains a `Raw/` subfolder.
+- Existing datasets (`BroadReactive`, `StrictReactive`).
+- **Pretrained weights provenance:** the provided **UNet++/VGG19** weights (`net.pth`) were **trained on the `StrictReactive` dataset** (strongly reactive labels only).
+- When you want to **train**, copy the desired dataset into `Images/` with the exact layout above.
 
 ### Masks / labels
 - **Binary segmentation** (astrocyte vs background).
