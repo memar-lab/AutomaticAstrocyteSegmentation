@@ -63,64 +63,8 @@ README.md
 
 
 
-2. Installing Requirements (💡 **Note:** You can either use the pre-supplied `requirements.txt` to install all dependencies at once, **or** follow the manual steps below to create a new conda environment and install Jupyter Notebook and all required packages.)
+2. Installing Requirements (💡 **Note:** You can either use the pre-supplied `requirements.txt` to install all dependencies at once, **or** follow the manual steps in INSTALLATION.md to create a new conda environment and install Jupyter Notebook and all required packages.)
 
-   ### Instructions for installing the packages
-   #### 1. Create and activate a new environment
-   Open **Anaconda Prompt** and run:
-   ```bash
-   conda create --name PathologySegmentation python=3.8
-   conda activate PathologySegmentation
-   ```
-
-
-   #### 2. Install Jupyter Notebook
-   ```bash
-   conda install jupyter
-   ```
-
-   #### 3. Install pip
-   ```bash
-   conda install pip
-   ```
-
-   #### 4. Install the required packages
-   You can install the packages manually as follows:
-   ```bash
-   # Core libraries
-   conda install -c conda-forge opencv
-   conda install pandas
-   conda install matplotlib
-   conda install pillow
-   conda install numpy
-
-   # PyTorch
-   # CPU version:
-   conda install pytorch torchvision cpuonly -c pytorch
-   # GPU version (CUDA 11.8):
-   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-
-   # Additional packages
-   pip install split-folders
-   pip install scikit-learn
-   pip install torchsummary
-   pip install segmentation_models_pytorch
-   pip install torchinfo
-   ```
-
-   #### 5. Launch Jupyter Notebook
-   Once all packages are installed, launch Jupyter Notebook from the same environment:
-   ```bash
-   jupyter notebook
-   ```
-
-   ---
-
-   **Alternative (one step):**
-   If you prefer a single-step installation, from within the activated environment run:
-   ```bash
-   pip install -r requirements.txt
-   ```
 
 3. Open `TrainSegmentationModel.ipynb` and set:
    ```python
