@@ -18,11 +18,11 @@ Images/                      # ACTIVE dataset for training
     Raw/
     Labels/
 
-Dataset/                     # optional: storage for multiple datasets
+Dataset/                     
   BroadReactive/...
   StrictReactive/...
 
-PredictionDataset/           # ACTIVE dataset for inference/prediction
+PredictionDataset/           # ACTIVE dataset for prediction
   <AnyFolderName>/
     Raw/                     # place raw images here
     Segmentation/            # binary outputs will be written here
@@ -63,7 +63,7 @@ README.md
 
 
 
-2. Installing Requirements (💡 **Note:** You can either use the pre-supplied `requirements.txt` to install all dependencies at once, **or** follow the manual steps in INSTALLATION.md to create a new conda environment and install Jupyter Notebook and all required packages.)
+2. Installing Requirements (💡 **Note:** You can either use the pre-supplied `requirements.txt` to install all dependencies at once, **or** follow the manual steps in `INSTALLATION.md` to create a new conda environment and install Jupyter Notebook and all required packages.)
 
 
 3. Open `TrainSegmentationModel.ipynb` and set:
